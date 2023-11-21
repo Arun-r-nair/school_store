@@ -1,0 +1,611 @@
+{% load static %}
+<html>
+
+<head>
+      <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Spering</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body><div>
+  <div class="hero_area"  style="height:77.3;">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'images/logo.png' %}" alt="" />
+            <span>
+              My Store
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> About</a>
+              </li>
+              <li class="nav-item">
+
+                <a class="nav-link" href="#">Departments </a>
+
+
+
+
+
+
+
+
+
+
+
+
+             </li>
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" href="category.html"> Category </a>-->
+<!--              </li>-->
+            </ul>
+            <div class="user_option">
+              <a href="#">
+                <span>
+                  Login
+                </span>
+              </a>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="custom_menu-btn ">
+              <button>
+                <span class=" s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </header>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   experience section -->
+
+  <section class="experience_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="{% static 'images/experience-img.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                To Make Order
+              </h2>
+            </div>
+
+            <form id="myForm" onsubmit="submitForm(event)">
+                    <!-- Form fields -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required><br><br>
+
+                    <label for="dob">DOB:</label>
+                    <input type="date" id="dob" required><br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required><br><br>
+
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                    <input type="radio" id="female" name="gender" value="female"> Female<br><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" pattern="[0-9]{10}" required><br><br>
+
+                    <label for="email">Mail ID:</label>
+                    <input type="email" id="email" required><br><br>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" rows="4" required></textarea><br><br>
+
+                      <label for="department">Select Department:</label>
+              <select id="department" onchange="updateCourses()">
+                <option value="computer science">computer science</option>
+                <option value="commerce">Commerce</option>
+                <option value="english">English</option>
+                <option value="electronics">Electronics</option>
+                <option value="maths">Maths</option>
+              </select><br><br>
+
+
+
+              <label for="course">Select Course:</label>
+              <select id="course">
+                <option value="bca">BCA</option>
+                <option value="bsccs">Bsc. CS</option>
+                <option value="bscenglish">Bsc. English</option>
+                <option value="bscelectronics">Bsc. Electronics</option>
+                <option value="bscmaths">Bsc. Maths</option>
+                <option value="bcom">Bcom</option>
+                <option value="bba">BBA</option>
+                <option value="mscenglish">Msc. English</option>
+                <option value="mscelectronics">Msc. Electronics</option>
+                <option value="mscmaths">Msc. Maths</option>
+              </select><br><br>
+
+                    <label for="purpose">Purpose:</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="enquiry">For Enquiry</option>
+                        <option value="order">Place Order</option>
+                        <option value="return">Return</option>
+                        <!-- Add other purposes as needed -->
+                    </select><br><br>
+
+                    <label>Materials provide:</label>
+                    <input type="checkbox" id="notebook"> Note Book
+                    <input type="checkbox" id="pen"> Pen
+                    <input type="checkbox" id="examPapers"> Exam Papers<br><br>
+
+                            <button type="submit" style="color:black">Submit</button>
+
+                </form>
+
+                <div id="confirmation-message" style="display: none;">
+                    <!-- The confirmation message will be displayed here -->
+                    <p>Order Confirmed</p>
+                    <a href="{% url 'home' %}">Return to Home Page</a>
+                </div>
+            </div>
+
+            <script>
+                // Add your JavaScript code here
+                function updateCourses() {
+                    // Implement logic to update the courses based on the selected department
+                    // You can use AJAX to fetch courses from the server based on the selected department
+                    // and update the options in the courses dropdown dynamically
+                }
+
+                function submitForm(event) {
+                    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+                    // Implement validation logic here
+                    // Check if all required fields are filled
+
+                    // Display confirmation message and link
+                    document.getElementById('confirmation-message').style.display = 'block';
+                }
+                if (selectedDepartment === "computer science") {
+                    addOption(courseDropdown, "bca", "BCA");
+                    addOption(courseDropdown, "bsccs", "Bsc CS");
+                  } else if (selectedDepartment === "commerce") {
+                    addOption(courseDropdown, "bcom", "BCom");
+                    addOption(courseDropdown, "bba", "BBA");
+                  } else if (selectedDepartment === "english") {
+                    addOption(courseDropdown, "bscenglish", "Bsc. English");
+                    addOption(courseDropdown, "mscenglish", "Msc. English");
+                  } else if (selectedDepartment === "electronics") {
+                    addOption(courseDropdown, "bscelectronics", "Bsc. Electronics");
+                    addOption(courseDropdown, "mscelectronics", "Msc. Electronics");
+                  } else if (selectedDepartment === "maths") {
+                    addOption(courseDropdown, "bscmaths", "Bsc. Maths");
+                    addOption(courseDropdown, "mscmaths", "Msc. Maths");
+                  }
+
+                function updateCourses() {
+                    var departmentDropdown = document.getElementById("department");
+                    var courseDropdown = document.getElementById("course");
+
+                // Clear current options in the course dropdown
+                    courseDropdown.innerHTML = "";
+
+                // Get the selected department
+                    var selectedDepartment = departmentDropdown.value;
+
+                // Add courses based on the selected department
+                if (selectedDepartment === "computer science") {
+                    addOption(courseDropdown, "bca", "BCA");
+                    addOption(courseDropdown, "bsccs", "Bsc CS");
+                 } else if (selectedDepartment === "commerce") {
+                    addOption(courseDropdown, "bcom", "BCom");
+                    addOption(courseDropdown, "bba", "BBA");
+                 } else if (selectedDepartment === "english") {
+                    addOption(courseDropdown, "bscenglish", "Bsc. English");
+                    addOption(courseDropdown, "mscenglish", "Msc. English");
+                 } else if (selectedDepartment === "electronics") {
+                   addOption(courseDropdown, "bscelectronics", "Bsc. Electronics");
+                   addOption(courseDropdown, "mscelectronics", "Msc. Electronics");
+                 } else if (selectedDepartment === "maths") {
+                   addOption(courseDropdown, "bscmaths", "Bsc. Maths");
+                   addOption(courseDropdown, "mscmaths", "Msc. Maths");
+                 }
+
+                }
+
+                // Helper function to add options to a dropdown
+                function addOption(dropdown, value, text) {
+                    var option = document.createElement("option");
+                    option.value = value;
+                    option.text = text;
+                    dropdown.add(option);
+                    }
+
+                // Initial update when the page loads
+                    updateCourses();
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form id="myForm" action="" method="POST">-->
+<!--        <label for="name">Name:</label>-->
+<!--        <input type="text" id="name" name="name" required><br><br>-->
+
+<!--        <label for="dob">DOB:</label>-->
+<!--        <input type="date" id="dob" name="dob" required><br><br>-->
+
+<!--        <label for="age">Age:</label>-->
+<!--        <input type="number" id="age" name="age" required><br><br>-->
+
+<!--        <label>Gender:</label>-->
+<!--        <label><input type="radio" name="gender" value="male"> Male</label>-->
+<!--        <label><input type="radio" name="gender" value="female"> Female</label><br><br>-->
+
+<!--        <label for="phone">Phone Number:</label>-->
+<!--        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>-->
+
+<!--        <label for="email">Mail ID:</label>-->
+<!--        <input type="email" id="email" name="email" required><br><br>-->
+
+<!--        <label for="address">Address:</label>-->
+<!--        <textarea id="address" name="address" rows="4" required></textarea><br><br>-->
+
+<!--  <label for="department">Select Department:</label>-->
+<!--  <select id="department" onchange="updateCourses()">-->
+<!--    <option value="computer science">computer science</option>-->
+<!--    <option value="commerce">Commerce</option>-->
+<!--    <option value="english">English</option>-->
+<!--    <option value="electronics">Electronics</option>-->
+<!--    <option value="maths">Maths</option>-->
+<!--  </select>-->
+
+<!--  <br>-->
+
+<!--  <label for="course">Select Course:</label>-->
+<!--  <select id="course">-->
+<!--    <option value="bca">BCA</option>-->
+<!--    <option value="bsccs">Bsc. CS</option>-->
+<!--    <option value="bscenglish">Bsc. English</option>-->
+<!--    <option value="bscelectronics">Bsc. Electronics</option>-->
+<!--    <option value="bscmaths">Bsc. Maths</option>-->
+<!--    <option value="bcom">Bcom</option>-->
+<!--    <option value="bba">BBA</option>-->
+<!--    <option value="mscenglish">Msc. English</option>-->
+<!--    <option value="mscelectronics">Msc. Electronics</option>-->
+<!--    <option value="mscmaths">Msc. Maths</option>-->
+<!--  </select><br><br>-->
+<!--  <label for="purpose">Purpose:</label>-->
+<!--        <select id="purpose" name="purpose" required>-->
+<!--            <option value="enquiry">For Enquiry</option>-->
+<!--            <option value="order">Place Order</option>-->
+<!--            <option value="return">Return</option>-->
+<!--            &lt;!&ndash; Add other purposes as needed &ndash;&gt;-->
+<!--        </select><br><br>-->
+
+<!--        <label>Materials provide:</label>-->
+<!--        <label><input type="checkbox" name="materials" value="notebook"> Notebook</label>-->
+<!--        <label><input type="checkbox" name="materials" value="pen"> Pen</label>-->
+<!--        <label><input type="checkbox" name="materials" value="exam-papers"> Exam Papers</label><br><br>-->
+<!--        &lt;!&ndash; Add other materials as needed &ndash;&gt;-->
+
+
+<!--            <div class="btn-box">-->
+<!--              <a href="" class="btn-1">-->
+<!--                Submit-->
+<!--              </a>-->
+<!--&lt;!&ndash;              <a href="" class="btn-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                Hire&ndash;&gt;-->
+<!--&lt;!&ndash;              </a>&ndash;&gt;-->
+<!--            </div>-->
+<!--            </form>-->
+<!--              {% for msg in messages %}-->
+<!--                {{msg}}-->
+<!--              {% endfor %}-->
+
+<!--  <script>-->
+<!--    function updateCourses() {-->
+<!--      var departmentDropdown = document.getElementById("department");-->
+<!--      var courseDropdown = document.getElementById("course");-->
+
+<!--      // Clear current options in the course dropdown-->
+<!--      courseDropdown.innerHTML = "";-->
+
+<!--      // Get the selected department-->
+<!--      var selectedDepartment = departmentDropdown.value;-->
+
+<!--      // Add courses based on the selected department-->
+<!--      if (selectedDepartment === "computer science") {-->
+<!--        addOption(courseDropdown, "bca", "BCA");-->
+<!--        addOption(courseDropdown, "bsccs", "Bsc CS");-->
+<!--      } else if (selectedDepartment === "commerce") {-->
+<!--        addOption(courseDropdown, "bcom", "BCom");-->
+<!--        addOption(courseDropdown, "bba", "BBA");-->
+<!--      } else if (selectedDepartment === "english") {-->
+<!--        addOption(courseDropdown, "bscenglish", "Bsc. English");-->
+<!--        addOption(courseDropdown, "mscenglish", "Msc. English");-->
+<!--      } else if (selectedDepartment === "electronics") {-->
+<!--        addOption(courseDropdown, "bscelectronics", "Bsc. Electronics");-->
+<!--        addOption(courseDropdown, "mscelectronics", "Msc. Electronics");-->
+<!--      } else if (selectedDepartment === "maths") {-->
+<!--        addOption(courseDropdown, "bscmaths", "Bsc. Maths");-->
+<!--        addOption(courseDropdown, "mscmaths", "Msc. Maths");-->
+<!--      }-->
+
+<!--    }-->
+
+<!--    // Helper function to add options to a dropdown-->
+<!--    function addOption(dropdown, value, text) {-->
+<!--      var option = document.createElement("option");-->
+<!--      option.value = value;-->
+<!--      option.text = text;-->
+<!--      dropdown.add(option);-->
+<!--    }-->
+
+<!--    // Initial update when the page loads-->
+<!--    updateCourses();-->
+<!--  </script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--             <form id="myForm">-->
+<!--        <label for="name">Name:</label>-->
+<!--        <input type="text" id="name" name="name" required><br><br>-->
+
+<!--        <label for="dob">DOB:</label>-->
+<!--        <input type="date" id="dob" name="dob" required><br><br>-->
+
+<!--        <label for="age">Age:</label>-->
+<!--        <input type="number" id="age" name="age" required><br><br>-->
+
+<!--        <label>Gender:</label>-->
+<!--        <label><input type="radio" name="gender" value="male"> Male</label>-->
+<!--        <label><input type="radio" name="gender" value="female"> Female</label><br><br>-->
+
+<!--        <label for="phone">Phone Number:</label>-->
+<!--        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>-->
+
+<!--        <label for="email">Mail ID:</label>-->
+<!--        <input type="email" id="email" name="email" required><br><br>-->
+
+<!--        <label for="address">Address:</label>-->
+<!--        <textarea id="address" name="address" rows="4" required></textarea><br><br>-->
+
+<!--        <label for="department">Department:</label>-->
+<!--        <select id="department" name="department" required>-->
+<!--            <option value="computer science">computer science</option>-->
+<!--            <option value="commerce">Commerce</option>-->
+<!--            <option value="english">English</option>-->
+<!--            <option value="electronics">Electronics</option>-->
+<!--            <option value="maths">Maths</option>-->
+<!--            &lt;!&ndash; Add other departments as needed &ndash;&gt;-->
+<!--        </select><br><br>-->
+
+<!--        <label for="courses">Courses:</label>-->
+<!--        <select id="courses" name="courses" required>-->
+<!--            <option value="bca">BCA</option>-->
+<!--            <option value="bsccs">Bsc. CS</option>-->
+<!--            <option value="bscenglish">Bsc. English</option>-->
+<!--            <option value="bscelectronics">Bsc. Electronics</option>-->
+<!--            <option value="bscmaths">Bsc. Maths</option>-->
+<!--            <option value="bcom">Bcom</option>-->
+<!--            <option value="bba">BBA</option>-->
+<!--            <option value="mscenglish">Msc. English</option>-->
+<!--            <option value="mscelectronics">Msc. Electronics</option>-->
+<!--            <option value="mscmaths">Msc. Maths</option>-->
+<!--            &lt;!&ndash; Courses will be populated dynamically using JavaScript based on the selected department &ndash;&gt;-->
+<!--        </select><br><br>-->
+
+
+
+
+
+
+
+
+
+
+<!--        <label for="purpose">Purpose:</label>-->
+<!--        <select id="purpose" name="purpose" required>-->
+<!--            <option value="enquiry">For Enquiry</option>-->
+<!--            <option value="order">Place Order</option>-->
+<!--            <option value="return">Return</option>-->
+<!--            &lt;!&ndash; Add other purposes as needed &ndash;&gt;-->
+<!--        </select><br><br>-->
+
+<!--        <label>Materials provide:</label>-->
+<!--        <label><input type="checkbox" name="materials" value="notebook"> Notebook</label>-->
+<!--        <label><input type="checkbox" name="materials" value="pen"> Pen</label>-->
+<!--        <label><input type="checkbox" name="materials" value="exam-papers"> Exam Papers</label><br><br>-->
+<!--        &lt;!&ndash; Add other materials as needed &ndash;&gt;-->
+
+
+<!--            <div class="btn-box">-->
+<!--              <a href="" class="btn-1">-->
+<!--                Submit-->
+<!--              </a>-->
+<!--&lt;!&ndash;              <a href="" class="btn-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                Hire&ndash;&gt;-->
+<!--&lt;!&ndash;              </a>&ndash;&gt;-->
+<!--            </div>-->
+<!--            </form>-->
+<!--              <script>-->
+<!--    function updateCourses() {-->
+<!--      var departmentDropdown = document.getElementById("department");-->
+<!--      var courseDropdown = document.getElementById("course");-->
+
+<!--      // Clear current options in the course dropdown-->
+<!--      courseDropdown.innerHTML = "";-->
+
+<!--      // Get the selected department-->
+<!--      var selectedDepartment = departmentDropdown.value;-->
+
+<!--      // Add courses based on the selected department-->
+<!--      if (selectedDepartment === "computer science") {-->
+<!--        addOption(courseDropdown, "bca", "BCA");-->
+<!--        addOption(courseDropdown, "bsccs", "Bsc CS");-->
+<!--      } else if (selectedDepartment === "commerce") {-->
+<!--        addOption(courseDropdown, "bcom", "BCom");-->
+<!--        addOption(courseDropdown, "bba", "BBA");-->
+<!--      } else if (selectedDepartment === "english") {-->
+<!--        addOption(courseDropdown, "bscenglish", "Bsc. English");-->
+<!--        addOption(courseDropdown, "mscenglish", "Msc. English");-->
+<!--      } else if (selectedDepartment === "electronics") {-->
+<!--        addOption(courseDropdown, "bscelectronics", "Bsc. Electronics");-->
+<!--        addOption(courseDropdown, "mscelectronics", "Msc. Electronics");-->
+<!--      } else if (selectedDepartment === "maths") {-->
+<!--        addOption(courseDropdown, "bscmaths", "Bsc. Maths");-->
+<!--        addOption(courseDropdown, "mscmaths", "Msc. Maths");-->
+<!--      }-->
+
+<!--    }-->
+
+<!--    // Helper function to add options to a dropdown-->
+<!--    function addOption(dropdown, value, text) {-->
+<!--      var option = document.createElement("option");-->
+<!--      option.value = value;-->
+<!--      option.text = text;-->
+<!--      dropdown.add(option);-->
+<!--    }-->
+
+<!--    // Initial update when the page loads-->
+<!--    updateCourses();-->
+<!--  </script>-->
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end experience section -->
+
+
+
+
+ <!-- footer section -->
+  <footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDate"></span> All Rights Reserved By School Store
+<!--        <a href="https://html.design/">Free Html Templates</a>-->
+      </p>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+
+
+
+
+
+</body>
+</html>
